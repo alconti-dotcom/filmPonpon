@@ -47,7 +47,7 @@
 <body>
 
     <div class="presentation-container">
-        <iframe src="https://www.canva.com/design/DAHBdpnCC-c/SG2ezP0r8noQz8Sa_i0zsQ/view?embed" allowfullscreen allow="autoplay; clipboard-write"></iframe>
+        <iframe src="" allowfullscreen allow="autoplay; clipboard-write"></iframe>
     </div>
 
 </body>
