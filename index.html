@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Yellow Orange Autumn Sunset Illustration Presentation</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            overflow: hidden;
+            background-color: #000000;
+            position: relative;
+        }
 
+        .presentation-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: auto;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            z-index: 1;
+            pointer-events: auto !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="presentation-container">
+        <iframe 
+            id="canva-frame"
+            src="https://www.canva.com/design/DAHNFT1R7jY/6l9rDEDjh3dcsLtYpT3pJg/view?embed" 
+            allowfullscreen="allowfullscreen" 
+            allow="autoplay; clipboard-write; encrypted-media; media-src *">
+        </iframe>
+    </div>
+
+    <script>
+        const unlockAudio = () => {
+            const frame = document.getElementById('canva-frame');
+            if (frame && frame.contentWindow) {
+                try {
+                    frame.contentWindow.postMessage('play', '*');
+                    frame.focus();
+                } catch (e) {
+                    console.log("Audio pipeline initialized");
+                }
+            }
+            window.removeEventListener('click', unlockAudio, true);
+            window.removeEventListener('touchstart', unlockAudio, true);
+        };
+
+        window.addEventListener('click', unlockAudio, true);
+        window.addEventListener('touchstart', unlockAudio, true);
+    </script>
+</body>
+</html>
